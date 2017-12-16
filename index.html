@@ -39,7 +39,7 @@
     </div>
   </div>
   <audio id="myAudio" autoplay controls>
-    <source src="../Theme/KIT.mp3" type="audio/mpeg">
+    <source src="../Hangman/Theme/KIT.mp3" type="audio/mpeg">
   </audio>
   <!-- Here we have div called "random-number" where our random number will go -->
   <h1 class="text-center" id="random-number"></h1>
@@ -108,11 +108,11 @@ function link(res) {
            //alert("postion "+ pos);
             if(pos == -1){           
                   counter = counter + 1;
-                  document.getElementById("Hang-img").src = "../img/hang"+ counter +".png";
+                  document.getElementById("Hang-img").src = "../Hangman/img/hang"+ counter +".png";
                   $("#Guesses").html("<h3>Wrong Guesses: " + counter+"</h3>");
                   if(counter > 7){
                     counter = 0;
-                    document.getElementById("Hang-img").src = "../img/hang7.png";
+                    document.getElementById("Hang-img").src = "../Hangman/img/hang7.png";
                     alert("Click ok to reload");
                     location.reload();
                   };
@@ -133,7 +133,7 @@ function link(res) {
     });
     $("#Start-button").on("click", function() { 
         $("#arena").show();     
-        document.getElementById("Hang-img").src = "../img/hang.png";
+        document.getElementById("Hang-img").src = "../Hangman/img/hang.png";
         $(document).ready(function() {
         var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
         // DYNAMICALLY CREATE BUTTONS
