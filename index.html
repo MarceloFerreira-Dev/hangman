@@ -6,7 +6,15 @@
        <!-- Added link to the jQuery Library -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        <!-- Added a link to Bootstrap-->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+       
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+  .jumbotron  {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+              }
+  </style>
 </head>
 <body>
   <div class="jumbotron" display="flex" justify-content="center" align-items="center">
@@ -135,10 +143,10 @@ function link(res) {
                  if(wronguess === maxmistakes){
                     // Show game over picture.
                     document.getElementById("Hang-img").src = "./img/hang"+ 6 +".png";
-                    // Alert You lose.
-                    // alert("You lose!! " + wronguess);
+                    // set variable wronguess to zero.
                     wronguess = 0;
-                    var myVar = setInterval(myTimer, 2000);
+                    // Set myDelay variable to call function mytimer after 2 seconds and reload the page.
+                    var myDelay = setInterval(myTimer, 2000);
                     function myTimer() {
                       location.reload();  
                     }
