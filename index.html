@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <title>Trigger Random</title>
+    <title>Hangman game</title>
        <!-- Added link to the jQuery Library -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        <!-- Added a link to Bootstrap-->
@@ -18,10 +18,8 @@
 </head>
 <body>
   <div class="jumbotron" display="flex" justify-content="center" align-items="center">
-
-      <img src="./img/logo.png" alt="Banner" class="img-responsive">
+    <img src="./img/logo.png" alt="Banner" class="img-responsive">
     <h1 class="text-center"></h1>
-        
         <div class="text-center">
       <!-- Here we have our button for start the game (#Start-button) -->
       <button id="Start-button" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-play-circle"></span> Play!</h1></button>
@@ -177,7 +175,7 @@ function link(res) {
     // On click function to start the game.
     $("#Start-button").on("click", function() { 
         // show button part of  the page.
-        $("#arena").show();   
+        $("#arena").slideDown(500);   
         // Show picture of Hangman stage.  
         document.getElementById("Hang-img").src = "./img/hang.png";
         $(document).ready(function() {
